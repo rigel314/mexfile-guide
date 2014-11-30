@@ -3,14 +3,6 @@
 #include <string.h>
 #include "mex.h"
 
-/* Compilation & Example
-	mex winList.c
-	A=winList()
-	for i=1:length(A)
-		disp(sprintf('%#08x: %s', uint64(A(i).hwnd), A(i).title))
-	end
-*/
-
 // Comment this out return every window.
 #define ONLY_VISIBLE
 

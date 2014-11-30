@@ -9,8 +9,8 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
 	if(nlhs != 0) // Left hand side (number of return values)
 		mexErrMsgTxt("Returns exactly zero things.");
 
-	Beep(1000, 1000);
-	Beep(2000, 1000);
+	Beep(1000, 1000); // Defined in windows.h
+	Beep(2000, 1000); // Beep(int freq, int ms)
 
 	return;
 }

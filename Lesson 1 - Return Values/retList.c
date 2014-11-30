@@ -5,10 +5,10 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
 {
 	mxArray* outMxArr; // Pointer for our output data
 	const mwSize dims[2] = {10, 10}; // Size of our output data
-	uint16_t* data; // Pointer type for an intemediate step
+	uint16_t* data; // Pointer type for an intermediate step
 	int i,j; // For loop counters
 
-	//Argument checking.
+	// Argument checking.
 	if(nrhs != 0) // Right hand side (a.k.a. 'argc' or 'nargin')
 		mexErrMsgTxt("Takes exactly zero arguments.");
 	if(nlhs > 1) // Left hand side (number of return values)

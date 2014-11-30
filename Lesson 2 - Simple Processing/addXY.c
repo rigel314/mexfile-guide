@@ -8,9 +8,9 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
 
 	double x,y; // Input variables.
 
-	double* data; // Pointer type for an intemediate step
+	double* data; // Pointer type for an intermediate step
 
-	//Argument checking.
+	// Argument checking.
 	if(nrhs != 2) // Right hand side (a.k.a. 'argc' or 'nargin')
 		mexErrMsgTxt("Takes exactly two arguments.");
 	if(nlhs > 1) // Left hand side (number of return values)
@@ -26,8 +26,8 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
 	data = mxGetData(outMxArr); // Grab a pointer to the beginning of the array.
 	
 	// read our input
-	x = *((double*)mxGetData(prhs[0]));
-	y = *((double*)mxGetData(prhs[1]));
+	x = *((double*)mxGetData(prhs[0])); // Get a pointer to the data of the first argument, cast it to a double pointer and get the value of said pointer.
+	y = *((double*)mxGetData(prhs[1])); // Get a pointer to the data of the second argument, cast it to a double pointer and get the value of said pointer.
 	
 	data[0] = x+y; // Write a value.
 
