@@ -1,5 +1,44 @@
 Lesson 3 - Class
 =====
+# Building & Examples
+## LPFinit
+```
+>> mex LPFinit.cpp LPFclass.cpp
+Building with 'Microsoft Windows SDK 7.1 (C++)'.
+MEX completed successfully.
+>> lpf = LPFinit()
+
+lpf = 
+
+    pointer: 1142309120
+
+>>
+```
+
+## LPFinput
+```
+>> mex LPFinput.cpp LPFclass.cpp
+Building with 'Microsoft Windows SDK 7.1 (C++)'.
+MEX completed successfully.
+>> LPFinput(lpf, [1,1,1,1,1,1,1,1,1])
+
+ans =
+
+    0.0025    0.0120    0.0296    0.0535    0.0824    0.1149    0.1501    0.1872    0.2253
+
+>>
+```
+
+## LPFdestroy
+```
+>> mex LPFdestroy.cpp LPFclass.cpp
+Building with 'Microsoft Windows SDK 7.1 (C++)'.
+MEX completed successfully.
+>> LPFdestroy(lpf)
+>>
+```
+
+# Documentation
 `ret = LPFinit();`<br />
 ret is set equal to an instance of an LPF class.  Except MEX files can't return a MATLAB class, so I returned a MATLAB struct with a pointer.
 
